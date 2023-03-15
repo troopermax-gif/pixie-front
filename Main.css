@@ -1,0 +1,443 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  /* display: flex;
+  flex-direction: column; */
+  overflow: hidden;
+}
+.your-class{
+  max-width: 100%;
+  max-height: 100%;
+
+}
+.logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.navbar {
+  background-color: #2196f3;
+  padding: 0.75rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar > a {
+  color: white;
+  /* border-bottom: 3px solid; */
+  /* padding: 0 0.5rem; */
+  text-decoration: none;
+  padding: 5px 80px;
+}
+.navbar a:hover{
+  /* text-decoration: underline; */
+  border-bottom: 3px solid;
+  color: white;
+  transition: 0.1s;
+}
+a.active{
+  /* text-decoration: underline; */
+  border-bottom: 3px solid;
+}
+
+/* .banner {
+  width: 100%;
+  height: 100px;
+  background-image: url("assets/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+.about-us {
+  padding: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  -webkit-box-shadow: 10px 10px 40px 2px rgb a(214, 214, 214, 1);
+  -moz-box-shadow: 10px 10px 40px 2px rgba(214, 214, 214, 1);
+  box-shadow: 10px 10px 40px 2px rgba(214, 214, 214, 1);
+  margin: auto;
+}
+
+.about-us > p {
+  width: 50%;
+  padding: 1rem;
+}
+
+.about-us > img {
+  max-width: 240px;
+}
+
+.section-2 {
+  padding: 2rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-flow: row-reverse;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+/* .heading{
+  padding: 2rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-flow: row-reverse;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-left: -10cm;
+} */
+
+.section-2 > p {
+  width: 50%;
+  padding: 1rem;
+}
+
+.section-2 > img {
+  max-width: 360px;
+}
+
+/* rahul */
+
+
+ul{
+  width: 100%;
+  list-style-type: none;
+  float: Right;
+  margin-top: 30px;
+  /* margin-left: -100px; */
+  text-align: center;
+  /* top: 50%;
+  left: 50%; */
+
+}
+ul li{
+  display: inline-block;
+
+}
+
+ul li a{
+  text-decoration: none;
+  color: black;
+  padding: 5px 20px;
+  border: 1px solid transparent;
+  transition: 0.5s ease;
+  font-size: 3.5mm;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+ul li a:hover{
+  background-color: grey ;
+  color: black;
+
+}
+ul li.active a{
+  background-color: grey ;
+  color: black;
+}
+
+.logof{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 150px; */
+  /* height: auto; */
+  /* padding: 400px 5px; */
+
+}
+
+.slogo ul img{
+  /* float: "right"; */
+  width: 20px;
+  margin-top: 1140px;
+  height: auto;
+  padding: 10px 10px;
+  display: block;
+  text-align: center;
+  /* margin-left: auto;
+  margin-right: auto; */
+  /* text-align: center; */
+}
+
+
+.avatar1{
+  /* padding: 15px 25px; */
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  position: absolute;
+  top: 500px;
+  left: 575px;
+  /* background-color: transparent; */
+}
+.avatar2 {
+  /* padding: 15px 25px; */
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  position: absolute;
+  top: 500px;
+  left: 630px;
+  background-color: transparent;
+}
+.avatar3 {
+  /* padding: 15px 25px; */
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  position: absolute;
+  top: 500px;
+  left: 680px;
+  background-color: transparent;
+}
+
+.bottam {
+  /* top: 500px;
+  left: 630px; */
+  margin-top: -20px;
+  /* margin-left: 300px; */
+  font-size: 3mm;
+  text-align: center;
+  border: 1px solid rgb(224, 219, 219);
+  padding: 1cm;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* //popup */
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 3; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 20%;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+input[type=text], input[type=email], input[type=number], select, textarea {
+  width: 100%;
+  margin: 10px auto;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+  box-sizing: border-box;
+
+}
+
+input[type=submit] {
+  width: 100%;
+  margin: 10px auto;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+  box-sizing: border-box;
+
+}
+
+input[type=submit]:hover {
+  background-color: #f19e36;
+    box-sizing: border-box;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  box-sizing: border-box;
+
+}
+.slogo ul,
+.slogo{
+  display:inline-block;
+  width: 100%;
+}
+.slogo ul li{
+  display: inline-block;
+}
+.slogo ul li a{
+  display: inline-block;
+  width:20px;
+  border-radius: 50%;
+  padding: 0;
+}
+.slogo ul li a img{
+    display: inline-block;
+    max-width: 100%;
+    position: relative;
+    height: auto;
+    padding: 0;
+    /* margin: 0; */
+    top: 0;
+    left: 0;
+}
+/*
+.avatar4 {
+  /* padding: 15px 25px; * /
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  position: absolute;
+  top: 500px;
+  left: 730px;
+  background-color: transparent;
+}
+.slogo ul img:hover{
+  background-color: grey;
+}*/
+
+/* //changes */
+.slogo ul li a img {
+  display: inline-block;
+  max-width: 100%;
+  position: relative;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+}
+constructed stylesheet
+.slogo ul img {
+  /* width: 20px; */
+  margin-top: 1140px;
+  height: auto;
+  padding: 10px 10px;
+  display: block;
+  /* text-align: center; */
+  /* text-align: center; */
+}
+constructed stylesheet
+.avatar1 {
+  /* padding: 15px 25px; */
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  position: absolute;
+  top: 500px;
+  left: 575px;
+  /* background-color: transparent; */
+}
+constructed stylesheet
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+constructed stylesheet
+ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 5px 20px;
+  border: 1px solid transparent;
+  transition: 0.5s ease;
+  font-size: 3.5mm;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+user agent stylesheet
+a:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+}
+user agent stylesheet
+li {
+  text-align: -webkit-match-parent;
+}
+constructed stylesheet
+ul {
+  width: 100%;
+  list-style-type: none;
+  float: Right;
+  margin-top: 30px;
+  /* margin-left: -100px; */
+  text-align: center;
+}
+user agent stylesheet
+ul {
+  list-style-type: disc;
+}
+
+/* //tab */
+/* .tabContainer{
+  width: 100%;
+  height: 350px;
+  margin-top: -1000px;
+}
+.tabContainer .buttonContainer{
+  height: 15%;
+} */
+.tabContainer .buttonContainer button{
+  width: 25%;
+  height: 100%;
+  float: left;
+  border: none;
+  outline:none;
+  cursor: pointer;
+  padding: 15px;
+  font-family: sans-serif;
+  font-size: 18px;
+  background-color: #eee;
+}
+.tabContainer .buttonContainer button:hover{
+  background-color: #d7d4d4;
+}
+.tabContainer .tabPanel{
+  height: 100%;
+  background-color: gray;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 22px;
+  display: none;
+}

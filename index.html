@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Main</title>
+    <link rel="stylesheet" href="Main.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="quick.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="slickmain/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slickmain/slick/slick-theme.css" />
+
+    <script type="text/javascript" src="slickmain/slick/slick.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.your-class').slick({
+                dots: true,
+                speed: 3,
+                SlideToShow: 1,
+                SlideToScroll: 1,
+                arrow: true,
+
+                //   background-Color: violet:
+            });
+        });
+
+
+    </script>
+
+
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="logo.png" alt="logo">
+        </div>
+        <div class="navbar">
+            <a class="active" href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">About Us</a>
+            <a id="myBtn">Contact Us</a>
+        </div>
+
+        <div class="your-class">
+            <div> <img src="banner.png" alt="asset 1"></div>
+            <div><img src="banner2.jpg" alt="asset 1"></div>
+            <div><img src="banner3.jpg" alt="asset 1"></div>
+        </div>
+
+        <!-- //tab -->
+        <div class="tabContainer">
+            <div class="buttonContainer">
+                <button onclick="showPanel (0,'#ffffff')">Tab 1</button>
+                <button onclick="showPanel(1,'#ffffff')">Tab 2</button>
+                <button onclick="showPanel(2,'#ffffff')">Tab 3</button>
+                <button onclick="showPanel(3,'#ffffff')">Tab 4</button>
+            </div>
+        </div>
+
+        <div class="banner"></div>
+        <div style="padding: 0 4rem; margin-top: 10rem;">
+            <div class="about-us">
+                <img src="images.png" alt="asset 1">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quae iste ullam sed earum
+                    dignissimos quos
+                    minus unde odio soluta harum minima nemo eos iure dolorem suscipit repellat consequuntur fuga!</p>
+            </div>
+        </div>
+        <div class="section-2">
+            <img src="destination_img.png" alt="asset 2">
+            <!-- <b class="heading">A Destination For New Millennium</b> -->
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quae iste ullam sed earum dignissimos
+                quos
+                minus unde odio soluta harum minima nemo eos iure dolorem suscipit repellat consequuntur fuga!</p>
+        </div>
+        <div class="footer">
+        </div>
+
+        <div>
+            <img src="logo.png" class="logof" width="90px" height="20px">
+        </div>
+        <div>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">HELP</a></li>
+                <li><a href="#">PRIVACY POLICY</a></li>
+                <li><a href="#">HOW IT WORKS ?</a></li>
+                <li><a id="myBtn">CONTACT US</a></li>
+            </ul>
+        </div>
+        <div class="slogo">
+            <ul>
+                <li><a href="href=" https:www.facebook.com"><img src="facebook.png" class="avatar1"></a></li>
+                <li><a href="#"><img src="twitter.png" class="avatar2"></a></li>
+                <li><a href="#"><img src="linkedin.png" class="avatar3"></a></li>
+                <li><a href="#"><img src="youtube.png" class="avatar4"></a></li>
+            </ul>
+
+        </div>
+
+
+        <div class="bottam">COPYRIGHT &copy; 2019 COMPANY NAME</div>
+        <!-- //popup -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <center>
+                    <p><b>CONTACT US</b></p>
+                </center>
+                <form action="">
+                    <div class="row">
+                        <input type="text" id="name" name="firstname" placeholder="Name" required>
+                    </div>
+                    <div class="row">
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="row">
+                        <center><input type="number" id="number" name="number" placeholder="Mobile No." required>
+                        </center>
+                    </div>
+                    <div class="row">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+</body>
+
+</html>
+<script>
+    //   popup
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    //   tab
+    var tabButtons = document.querySelectorAll(".tabContainer .buttonContainer button");
+    var tabPanels = document.querySelectorAll(".tabContainer  .tabPanel");
+
+    function showPanel(panelIndex, colorCode) {
+        tabButtons.forEach(function (node) {
+            node.style.backgroundColor = "";
+            node.style.color = "";
+        });
+        tabButtons[panelIndex].style.backgroundColor = " #0080FF";
+        tabButtons[panelIndex].style.color = "white";
+        tabPanels.forEach(function (node) {
+            node.style.display = "none";
+        });
+        tabPanels[panelIndex].style.display = "block";
+        tabPanels[panelIndex].style.backgroundColor = colorCode;
+    }
+    showPanel(0, '#ffffff');
+</script>

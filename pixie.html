@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PIXIE</title>
+<link rel="stylesheet" href="PIXIECSS.css">
+<link rel="stylesheet" href="assets/slick/slick.css">
+<link rel="stylesheet" href="assets/slick/slick-theme.css">
+</head>
+<body>
+    <div>
+            <div class="logo1">
+                <img src="assets/header-logo.png" alt="logo">
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                </ul>
+                
+            </div>
+
+    </div>
+           <div class="slider-area">
+            <div class="slider-img">
+                <div><img width=100% src="assets/banner.png"></div>
+                <div><img width=100% src="assets/banner2.jpg"></div>
+                <div><img width=100% src="assets/banner.png"></div>
+            </div>
+        
+   </div> 
+   <div class="tabContainer">
+    <div class="buttonContainer">
+        <button onclick="showPanel(0,'#ffffff')">Tab 1</button>
+        <button onclick="showPanel(1,'#ffffff')">Tab 2</button>
+        <button onclick="showPanel(2,'#ffffff')">Tab 3</button>
+        <button onclick="showPanel(3,'#ffffff')">Tab 4</button>
+    </div>
+    <div class="tabPanel">
+        
+    </div>>
+
+       
+    <div class="tabPanel">Tab 2:Content</div>
+    <div class="tabPanel">Tab 3:Content</div>
+    <div class="tabPanel">Tab 4:Content</div>
+</div>
+<div class="section-2">
+    <img src="assets/destination_img.png" alt="asset 2">
+    <!-- <h2>A Destination For The New Millennium<h2> -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quae iste ullam sed earum dignissimos quos
+        minus unde odio soluta harum minima nemo eos iure dolorem suscipit repellat consequuntur fuga!</p>
+</div>
+<div>
+        <div class="logo1">
+            <img src="assets/header-logo.png" alt="logo">
+
+        </div>
+        <div class="nav1">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="assets/slick/slick.js"></script>
+
+<script>
+    $(document).ready(function(){
+      $('.slider-img').slick({
+        dots: true,
+        arrows:false,
+        autoplay:true,
+        autoplaySpeed:1500,
+        fade:true,
+        fadeSpeed:1000,
+
+       
+      });
+    });
+
+    var tabButtons=document.querySelectorAll(".tabContainer .buttonContainer button");
+var tabPanels=document.querySelectorAll(".tabContainer  .tabPanel");
+
+function showPanel(panelIndex,colorCode) {
+    tabButtons.forEach(function(node){
+        node.style.backgroundColor="";
+        node.style.color="";
+    });
+    tabButtons[panelIndex].style.backgroundColor=" #0080FF";
+    tabButtons[panelIndex].style.color="white";
+    tabPanels.forEach(function(node){
+        node.style.display="none";
+    });
+    tabPanels[panelIndex].style.display="block";
+    tabPanels[panelIndex].style.backgroundColor=colorCode;
+}
+showPanel(0,'#ffffff');
+  </script>
+
+</body>
+</html>

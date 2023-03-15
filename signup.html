@@ -1,0 +1,74 @@
+<html>
+<head>
+    <title> Sign Up Form </title>
+    <link rel="stylesheet" type="text/css" href="signup.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script>
+    $(document).ready(function(){
+    $('#btn').click(function(){
+        
+       if($('#fname').val() == ''){
+          alert('First name cannot be left blank');
+       }
+       else if($('#lname').val() == ''){
+        alert('Last name cannot be left blank');
+       }
+       else if($('#state').val()=='Select state'){
+       alert('select state');
+       }
+              else{
+            alert('Submission Successful');
+        }
+
+    });
+    
+    });
+           
+               
+   
+   </script>
+    
+    
+     
+</head>
+    <body>
+    
+        <div class="login-box">
+            <img src="avatar.png" class="avatar">
+        <h1> Sign Up Form </h1>
+        
+            <form name="regform" method="post" onsubmit="validateForm()">
+            
+            <p for="fname">First Name</p>
+            <input type="text" name="first name" id="fname" placeholder="Enter First Name">  
+             <h5 id="fnamecheck"> </h5>   
+                   
+            <p for="lname">Last Name</p>
+         <input type="Last Name" name="Last Name" id="lname" placeholder="Enter Last Name">  
+            <h5 id="lnamecheck"> </h5>  
+                    
+            <p>Gender</p><br/>
+            <input type="radio" name="gender" id="Male" value="Male">
+            <lable for="male">Male</label>
+            
+            <input type="radio" name="gender" id="Female" value="Female">
+            <lable for="female">Female</label><br/>
+            
+            <lable for="State">State</label>
+            <select id="state" name="State">
+            <option value="select">Select state</option>
+            <option value="maharashtra">Maharashtra</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Rajasthan">Rajasthan</option>
+            
+            <input type="submit" id="btn" value="Sign Up">
+            
+               
+            </form>
+            
+        </div>
+        
+        
+    
+    </body>
+</html>
